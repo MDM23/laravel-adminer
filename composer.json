@@ -1,0 +1,10 @@
+{
+  "name": "mdm23/laravel-adminer",
+  "version": "0.1.0",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "MDM23\\LaravelAdminer\\": "src/LaravelAdminer/"
+    }
+  }
+}

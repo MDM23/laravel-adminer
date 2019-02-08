@@ -1,0 +1,8 @@
+{
+  "name": "mdm23/laravel-adminer",
+  "autoload": {
+    "psr-4": {
+      "MDM23\\LaravelAdminer\\": "LaravelAdminer/"
+    }
+  }
+}
