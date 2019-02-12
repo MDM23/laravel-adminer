@@ -4,5 +4,12 @@
     "psr-4": {
       "MDM23\\LaravelAdminer\\": "LaravelAdminer/"
     }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "MDM23\\LaravelAdminer\\AdminerServiceProvider"
+      ]
+    }
   }
 }
