@@ -17,6 +17,6 @@ env:
     - LARAVEL_VERSION=5.5
     - LARAVEL_VERSION=master
 before_install:
-  - mysql -u root --password="" < test/e2e.sql
+  - mysql -u root --password="" < test/init.sql
 script:
   - make test

@@ -58,7 +58,8 @@ function assertNoError(): void {
                 return el.innerHTML;
             }
         })()
-EOT);
+EOT
+    );
 
     if (!empty($evaluation->getReturnValue())) {
         echo "UNEXPECTED ERROR: " . $evaluation->getReturnValue() . PHP_EOL;
