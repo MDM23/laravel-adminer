@@ -15,6 +15,6 @@ env:
     - DB_PASSWORD=root
   matrix:
     - LARAVEL_VERSION=5.5
-    - LARAVEL_VERSION=5.7
+    - LARAVEL_VERSION=master
 script:
   - make test
