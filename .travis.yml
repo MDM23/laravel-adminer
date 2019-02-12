@@ -1,0 +1,9 @@
+language: php
+addons:
+  chrome: stable
+php:
+  - "7.3"
+env:
+  - CHROME_BINARY="google-chrome-stable"
+script:
+  - make test

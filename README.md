@@ -1,7 +1,7 @@
-[![CircleCI](https://circleci.com/gh/MDM23/laravel-adminer/tree/master.svg?style=svg)](https://circleci.com/gh/MDM23/laravel-adminer/tree/master)
+<h1>Adminer for Laravel</h1>
 
-# laravel-adminer
+[![Build Status](https://travis-ci.org/MDM23/laravel-adminer.svg?branch=master)](https://travis-ci.org/MDM23/laravel-adminer)
 
-Adminer for Laravel development. Latest versions, fully tested.
+Adminer for Laravel development. Latest versions, end-to-end tested with PHP 7.0+.
 
 **WORK IN PROGRESS!** Please don't use this yet!
