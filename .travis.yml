@@ -11,10 +11,12 @@ env:
   global:
     - CHROME_BINARY=google-chrome-stable
     - COMPOSER_NO_INTERACTION=1
-    - DB_USERNAME=root
-    - DB_PASSWORD=root
+    - DB_USERNAME=e2e
+    - DB_PASSWORD=e2e
   matrix:
     - LARAVEL_VERSION=5.5
     - LARAVEL_VERSION=master
+before_install:
+  - mysql -u root --password="" < test/e2e.sql
 script:
   - make test
