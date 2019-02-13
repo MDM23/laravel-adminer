@@ -11,7 +11,8 @@ $loginAction = $page->evaluate(<<<EOT
         document.querySelector("[name='auth[password]'").value = "{$password}";
         document.querySelector("form").submit();
     })()
-EOT);
+EOT
+);
 
 $loginAction->waitForPageReload();
 
