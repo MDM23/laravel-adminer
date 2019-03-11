@@ -17,4 +17,16 @@ return [
 
     'baseURI' => '/adminer',
 
+    /*
+    |--------------------------------------------------------------------------
+    | Use auto login feature?
+    |--------------------------------------------------------------------------
+    |
+    | When enabled, you will be automatically logged in using your default
+    | database connection.
+    |
+    */
+
+    'autoLogin' => false,
+
 ];

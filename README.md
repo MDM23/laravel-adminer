@@ -48,10 +48,10 @@ automatically discovered and used.
 
 ## Roadmap
 
+- [x] Configurable auto-login feature
 - [ ] Run a nightly build job to detect new adminer releases
 - [ ] Create an automated release process
 - [ ] Publish the package to Packagist
-- [ ] Configurable auto-login feature
 - [ ] Only run in local environments due to security reasons
 - [ ] Check if integration tests would be sufficent
 - [ ] Extend the tests
