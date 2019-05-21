@@ -3,6 +3,7 @@
 namespace MDM23\LaravelAdminer;
 
 use Illuminate\Support\ServiceProvider;
+use RuntimeException;
 
 class AdminerServiceProvider extends ServiceProvider
 {
@@ -39,7 +40,7 @@ class AdminerServiceProvider extends ServiceProvider
     {
         $this->parseLaravelVersion($this->app->version());
 
-        $this->publishes([ self::CONFIG_FILE => config_path("laravel-adminer.php") ]);
+        $this->publishes([ self::CONFIG_FILE => $this->getConfigPath() ]);
 
         $this->loadRoutes();
     }
@@ -80,12 +81,27 @@ class AdminerServiceProvider extends ServiceProvider
      */
     protected function parseLaravelVersion(string $version)
     {
-        if (!preg_match("/^5\.(?P<minor>\d+)\./", $version, $matches)) {
+        if (!preg_match("/^(Lumen \()?5\.(?P<minor>\d+)\./", $version, $matches)) {
             throw new RuntimeException(
                 "Unable to parse Laravel minor version: " . $version
             );
         }
 
         $this->minorVersion = (int)$matches["minor"];
+    }
+
+    /**
+     * Returns the path where the config file is expected to be stored in the
+     * Laravel / Lumen installation.
+     *
+     * @return string
+     */
+    protected function getConfigPath()
+    {
+        if (!function_exists("config_path")) {
+            return base_path("config/laravel-adminer.php");
+        }
+
+        return config_path("laravel-adminer.php");
     }
 }
