@@ -1,7 +1,6 @@
 <?php
 
-Route::addRoute(
-    ["GET", "HEAD", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+Route::any(
     config("laravel-adminer.baseURI"),
     \MDM23\LaravelAdminer\AdminerController::class . "@index"
 );
