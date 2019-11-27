@@ -4,8 +4,9 @@ namespace MDM23\LaravelAdminer;
 
 use Illuminate\Config\Repository as ConfigRepository;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
-class AdminerController
+class AdminerController extends Controller
 {
     /**
      * @var \Illuminate\Config\Repository
