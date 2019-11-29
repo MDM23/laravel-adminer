@@ -46,7 +46,7 @@ class AdminerController extends Controller
      * We perform an automatic login (if configured) and load the actual adminer
      * file afterwards.
      */
-    public function index(): void
+    public function index()
     {
         $this->autoLogin();
 
@@ -60,7 +60,7 @@ class AdminerController extends Controller
      * uses socket authentication. As adminer prevents empty passwords, we
      * generate a random one for this purpose.
      */
-    private function autoLogin(): void
+    private function autoLogin()
     {
         if (! $this->config->get("laravel-adminer.autoLogin")) {
             return;
